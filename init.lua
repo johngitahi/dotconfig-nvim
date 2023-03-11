@@ -1,9 +1,8 @@
 -- set line numbering for all buffers
 vim.wo.number = true
 
-
--- require the remaps
-r-- remap for telescop-- remap for telescopequire("lua.remap")
+-- require telescope remaps
+require('remap')
 
 -- set tab spaces for different file types
 vim.cmd('autocmd FileType python,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab')
@@ -54,5 +53,5 @@ require('lualine').setup {
   },
   extensions = {}
 }
-
+-- extra setting for the status line
 vim.o.laststatus = 2
